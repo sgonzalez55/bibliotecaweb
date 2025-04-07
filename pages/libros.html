@@ -17,12 +17,25 @@
     <header>
       <nav>
         <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="libros.html">Libros</a></li>
-          <li><a href="autores.html">Autores</a></li>
-        </ul>
-      </nav>
+            <li><a href="../index.html">Inicio</a></li>
 
+            <li>
+                <a href="#">Libros</a>
+                <ul>
+                    <li><a href="./crear_libro.html">Crear</a></li>
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a href="./autores.html">Autores</a>
+                <ul>
+                    <li><a href="./crear_autor.html">Crear</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+  </header>
       <main>
         <section>
           <div class="buscador">
@@ -33,23 +46,28 @@
                   type="text"
                   class="buscar"
                   id="buscarLibro"
-                  placeholder="Buscar Libro"
+                  placeholder="Buscar Libro por ISBN"
+                  
                 />
               </div>
-              <button class="boton" type="button">Buscar</button>
+              <button id="buscar" class="boton" type="button">Buscar</button>
             </form>
           </div>
 
-          <div class="resultado">
-            <div class="card">
+          <div class="resultado" id="cards">
+            <!-- <div class="card">
               <img src="../assets/img/principito.jpg" alt="Libro 1" />
               <h2>Libro 1</h2>
               <p>autor</p>
               <p>Descripción del libro 1.</p>
-            </div>
+            </div> -->
           </div>
         </section>
       </main>
-    </header>
+  
+<script src="../js/modificarLibro.js"></script>
+<script src="../js/eliminarLibro.js"></script>
+<script src="../js/buscarLibro.js"></script>
+<script src="../js/buscador.js"></script>
   </body>
 </html>

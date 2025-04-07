@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Biblioteca Web</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+
+            <li>
+                <a href="./libros.html">Libros</a>
+                <ul>
+                    <li><a href="./crear_libro.html">Crear</a></li>
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a href="./autores.html">Autores</a>
+                <ul>
+                    <li><a href="./crear_autor.html">Crear</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <div class="titulos">
+        <h1>Bienvenido a la Biblioteca Web</h1>
+        <p>Por favor digita los datos para crear un nuevo libro</p>
+    </div>
+    
+    <main>
+    
+    <section class="formulario">
+        
+        <div class="form">
+            <form id="form" class="form-creacion" action="">
+                <label for="">ISBN</label>
+                <input type="text" name="isbn" id="isbn">
+
+                <label for="">TITULO</label>
+                <input type="text" name="titulo" id="titulo">
+
+                <label for="">AUTOR</label>
+                <input type="text" name="autor" id="autor">
+
+                <label for="fechaEdicion">FECHA DE EDICION</label>
+                <input type="text" name="fechaEdicion" id="fechaEdicion">
+                
+                <label for="numeroPaginas">NUMERO DE PAGINAS</label>
+                <input type="text" name="numeroPaginas" id="numeroPaginas">
+                
+                <label for="cantidadEjemplares">CANTIDAD DE EJEMPLARES</label>
+                <input type="text" name="cantidadEjemplares" id="cantidadEjemplares">
+
+                <label for="">SINOPSIS</label>
+                <input type="text" name="sinopsis" id="sinopsis">
+
+                <label for="">TIPO DE PRESENTACION</label>
+                <input type="text" name="presentacion" id="presentacion">
+
+                <label for="">TIPO LITERATURA</label>
+                <input type="text" name="literatura" id="literatura">
+
+                <button type="submit" class="crear-libro">Crear</button>
+            </form>
+
+
+        </div>
+        
+
+    </section>
+
+    </main>
+<script src="../js/crearLibro.js"></script>
+</body>
+</html>
