@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 
 
 const autores = new mongoose.Schema({
-    nombre :{type:String,require:true},
-    apellidos:{type:String,require:true},
-    fecpub:{type: Date, require: true },
-    premios:{type: String, require:true},
-    fecnac: {type: Date, require: true},
-    fecfall:{type: Date, require: true}
+    Nombres: { type: String, required: true },
+    Apellidos: { type: String, required: true },
+    FecPub: { type: Date, required: true },
+    Premios: { type: String, required: true },
+    FecNac: { type: Date, required: true },
+    FecFall: { type: Date, required: true }
 })
 
 module.exports = mongoose.model('autores',autores)

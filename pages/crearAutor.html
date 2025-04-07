@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Biblioteca Web</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+
+            <li>
+                <a href="./libros.html">Libros</a>
+                <ul>
+                    <li><a href="./crear_libro.html">Crear</a></li>
+                    
+                </ul>
+            </li>
+
+            <li>
+                <a href="./autores.html">Autores</a>
+                <ul>
+                    <li><a href="./crearAutor.html">Crear</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <div class="titulos">
+        <h1>Bienvenido a la Biblioteca Web</h1>
+        <p>Por favor digita los datos para crear un nuevo autor</p>
+    </div>
+    
+    <main>
+    
+    <section class="formulario">
+        
+        <div class="form">
+            <form id="form" class="form-creacion" action="">
+                <label for="Nombres">AUTOR</label>
+                <input type="text" name="Nombres" id="Nombres">
+
+                <label for="Apellidos">APELLIDOS</label>
+                <input type="text" name="Apellidos" id="Apellidos">
+
+                <label for="FecPub">FECHA PUBLICACION</label>
+                <input type="text" name="FecPub" id="FecPub">
+
+                <label for="Premios">PREMIOS</label>
+                <input type="text" name="Premios" id="Premios">
+                
+                <label for="FecNac">FECHA DE NACIMIENTO</label>
+                <input type="text" name="FecNac" id="FecNac">
+                
+                <label for="FecFall">FECHA DE FALLECIMIENTO</label>
+                <input type="text" name="FecFall" id="FecFall">
+
+                <button type="submit" class="crear-libro">Crear</button>
+            </form>
+
+
+        </div>
+        
+
+    </section>
+
+    </main>
+<script src="../js/crearAutor.js"></script>
+</body>
+</html>

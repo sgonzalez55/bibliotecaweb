@@ -8,6 +8,7 @@ const todoslibros = require('../routes/allLibros')
 const actualizar = require('../routes/modificarLibro')
 const eliminar = require('../routes/eliminarLibro')
 const crearLibro = require('../routes/crearLibro.js')
+const autores = require('../routes/crearAutor.js')
 app.use(http.json())//ojo sin esto no reconoce un json NO BORRAR
 
 app.use(cors());
@@ -27,22 +28,9 @@ app.use('/',todoslibros)
 app.use('/libros', actualizar)
 app.use('/libros',eliminar)
 app.use('/libros',crearLibro)
-
-const libros = require('../models/crearLibro.js')
-const autores = require('../models/crearAutor.js')
+app.use('/autores',autores)
 
 
-
-// app.post('/autores',async(req, res)=>{
-// try{
-//     const nuevoAutor = new autores(req.body)
-//     await  nuevoAutor.save()
-//     res.status(201).json({mensaje:'autor creado con exito',autores:nuevoAutor})
-// }catch(error){
-//     console.log(error)
-//     res.status(200).json({mensaje:'error al crear autor',error:error})
-// }
-// })
 
 
 app.listen(3000)

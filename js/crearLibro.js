@@ -1,5 +1,5 @@
 document.getElementById('form').addEventListener('submit', async (e) => {
-    e.preventDefault(); // Agregado para evitar envío por defecto
+    e.preventDefault(); 
 
     const formulario = e.target;
 

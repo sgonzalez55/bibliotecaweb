@@ -3,7 +3,7 @@ const router = express.Router()
 const Autor = require('../models/crearAutor')
 
 
-router.get('/buscar/:nombre',async(req, res)=>{
+router.get('/buscar/:Nombre',async(req, res)=>{
     try{
         const autores = await Autor.findOne({nombre:req.params.nombre})
         if(!autores){
