@@ -1,10 +1,13 @@
 const http = require('express')
 const app = http()
 const mongoose = require('mongoose')
+const cors = require('cors')
 const librosruta = require('../routes/buscarLibros')
 const autoresruta = require('../routes/buscarAutor')
+const todoslibros = require('../routes/allLibros')
 app.use(http.json())//ojo sin esto no reconoce un json NO BORRAR
 
+app.use(cors());
 
 const conexion = 'mongodb://localhost:27017/biblioteca'
 mongoose.connect('mongodb://localhost:27017/biblioteca')
@@ -17,6 +20,7 @@ mongoose.connect('mongodb://localhost:27017/biblioteca')
 //rutas
 app.use('/libros',librosruta)
 app.use('/autores',autoresruta)
+app.use('/',todoslibros)
 
 
 const libros = require('../models/crearLibro.js')
