@@ -12,10 +12,15 @@ document.addEventListener('DOMContentLoaded', async()=>{
             card.classList.add('card')
 
             card.innerHTML = `
-            <img src="./assets/img/${libro.portada || 'principito.jpg'}" alt="${libro.titulo}">
+            
+            <p>ISBN:${libro.isbn}</p>
             <h2>${libro.titulo}</h2>
             <p>${libro.autor}</p>
             <p>${libro.sinopsis}</p>
+            <p>${libro.numeroPaginas}</p>
+            <p>${libro.cantidadEjemplares}</p>
+            <p>${libro.tipoPresentacion}</p>
+            <p>${libro.tipoLiteratura}</p>
 
             `
             contenedor.appendChild(card)
