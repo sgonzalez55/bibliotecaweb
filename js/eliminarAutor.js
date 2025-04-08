@@ -1,17 +1,17 @@
-function eliminarLibro(card, isbn){
+function eliminarAutor(card, autor){
     const btneliminar = card.querySelector('.btn-eliminar')
 
     btneliminar.addEventListener('click',() =>{
-        const aceptar = confirm('Desea borrar el libro')
+        const aceptar = confirm('Desea borrar el autor')
 
         if(!aceptar){
             return
         }
-        fetch(`http://localhost:3000/libros/${isbn}`,{
+        fetch(`http://localhost:3000/autores/${autor.Nombres}`,{
             method: 'DELETE'
         })
         .then(data =>{
-            alert('libro eliminado')
+            alert('autor eliminado')
             card.remove()
         })
         .catch(error =>{

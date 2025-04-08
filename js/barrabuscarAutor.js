@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded',()=>{
     const buscar = document.getElementById('buscar')
-    const inputbuscar = document.getElementById('buscarLibro')
+    const inputbuscar = document.getElementById('buscarAutor')
 
     buscar.addEventListener('click',()=>{
-        const isbn = inputbuscar.value.trim()
-        buscarLibroisbn(isbn)
+        const nombre = inputbuscar.value.trim()
+        buscarAutor(nombre)
     })
-
-
 })
-

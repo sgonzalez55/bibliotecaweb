@@ -9,15 +9,17 @@ const actualizar = require('../routes/modificarLibro')
 const eliminar = require('../routes/eliminarLibro')
 const crearLibro = require('../routes/crearLibro.js')
 const autores = require('../routes/crearAutor.js')
+const modificarAutores =require('../routes/modificarAutor')
+const eliminarAutor = require('../routes/eliminarAutor')
 app.use(http.json())//ojo sin esto no reconoce un json NO BORRAR
 
-app.use(cors());
+app.use(cors())
 
 const conexion = 'mongodb://localhost:27017/biblioteca'
 mongoose.connect('mongodb://localhost:27017/biblioteca')
 
     .then(() => console.log('conexion establecida a MongoDB'))
-    .catch(err => console.error('Error al conectar a MongoDB:', err));
+    .catch(err => console.error('Error al conectar a MongoDB:', err))
 
 
 
@@ -29,6 +31,8 @@ app.use('/libros', actualizar)
 app.use('/libros',eliminar)
 app.use('/libros',crearLibro)
 app.use('/autores',autores)
+app.use('/autores',modificarAutores)
+app.use('/autores',eliminarAutor)
 
 
 

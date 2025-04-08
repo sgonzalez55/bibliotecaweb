@@ -1,7 +1,7 @@
 document.getElementById('form').addEventListener('submit', async (e) => {
-    e.preventDefault(); 
+    e.preventDefault() 
 
-    const formulario = e.target;
+    const formulario = e.target
 
     const autores = {
         Nombres: formulario.Nombres.value,
@@ -11,7 +11,7 @@ document.getElementById('form').addEventListener('submit', async (e) => {
         FecNac: formulario.FecNac.value, 
         FecFall: formulario.FecFall.value,
         
-    };
+    }
     
 
     try {
@@ -19,20 +19,20 @@ document.getElementById('form').addEventListener('submit', async (e) => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(autores)
-        });
+        })
 
-        const datos = await respuesta.json();
+        const datos = await respuesta.json()
 
         if (respuesta.ok) {
-            alert('autor creado ok');
-            formulario.reset();
+            alert('autor creado ok')
+            formulario.reset()
         } else {
-            alert('Error al crear autor');
-            console.log(datos); 
+            alert('Error al crear autor')
+            console.log(datos) 
         }
 
     } catch (error) {
-        console.log(error);
-        alert('Error con la base de datos, valida las conexiones');
+        console.log(error)
+        alert('Error con la base de datos, valida las conexiones')
     }
-});
+})

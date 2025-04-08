@@ -16,8 +16,6 @@ function buscarLibroisbn(isbn) {
 
             card.innerHTML = `
                     <p><strong>ISBN:</strong> <span class="isbn">${libro.isbn}</span></p>
-                    
-                    
                     <p><strong>Título:</strong> <span class="editable" data-field="titulo">${libro.titulo}</span></p>
                     <p><strong>Autor:</strong> <span class="editable" data-field="autor">${libro.autor}</span></p>
                     <p><strong>Sinopsis:</strong> <span class="editable" data-field="sinopsis">${libro.sinopsis}</span></p>
@@ -43,7 +41,6 @@ function buscarLibroisbn(isbn) {
 
             const btnModificar = card.querySelector('.btn-modificar');
             const btnEliminar = card.querySelector('.btn-eliminar');
-            
 
         })
         .catch(error => {

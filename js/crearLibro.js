@@ -30,7 +30,7 @@ document.getElementById('form').addEventListener('submit', async (e) => {
             formulario.reset();
         } else {
             alert('Error al crear libro');
-            console.log(datos); // Muestra errores si vienen del backend
+            console.log(datos); 
         }
 
     } catch (error) {

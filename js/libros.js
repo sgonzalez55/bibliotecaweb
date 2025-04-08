@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', async()=>{
             <h2>${libro.titulo}</h2>
             <p>${libro.autor}</p>
             <p>${libro.sinopsis}</p>
-            
+
             `
             contenedor.appendChild(card)
-            
+
         });
     }catch(error){
         console.log('Error al cargar libros',error)
